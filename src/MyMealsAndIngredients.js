@@ -1,10 +1,17 @@
-const MyMealsAndIngredients = ({selectedDay, updateDay, myShoppingList}) => {
+const MyMealsAndIngredients = ({selectedDay, updateDay, setMyList, myList}) => {
 
     const editMyMeal = (myInput, value) => {
         updateDay({
             ...selectedDay,
             [myInput]: value
         })
+    }
+
+    const addIngredients = (value) => {
+        if (value) {
+            
+            setMyList(value, ...myList);
+        }
     }
 
     if (!selectedDay) return <h3>Create Your Weekly Menu Today</h3>
@@ -31,9 +38,13 @@ const MyMealsAndIngredients = ({selectedDay, updateDay, myShoppingList}) => {
                 placeholder="List of ingredients..."
                 id="ingredients"
                 value={selectedDay.ingredients}
-                onChange={(e) => myShoppingList("ingredients", e.target.value)}
+                onChange={(e) => editMyMeal("ingredients", e.target.value)}
                 />
+                <div className="btn-position">
+                    <button className="btn-add" onClick={() => addIngredients(selectedDay.ingredients)}>Add ingredients to Shopping List</button>
+                </div>
             </div>
+
         </div>
     )
 }

@@ -17,7 +17,7 @@ h1 {
   font-family: 'Montserrat', sans-serif;
   background-color: #dcdc5a;
   padding: 20px;
-  border: none;
+  border: 2px solid rgb(83, 81, 81);
   border-radius: 20px;
   font-size: 17px;
 }
@@ -26,7 +26,7 @@ h1 {
   background: none;
   color: red;
   border: none;
-  text-shadow: 1px 1px black;;
+  text-shadow: 1px 1px rgb(120, 117, 117);;
 }
 .container-plan {
   width: 40%;
@@ -51,6 +51,7 @@ textarea {
   height: 200px;
   border-radius: 20px;
   font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10px;
 }
 .selected {
   font-family: 'Montserrat', sans-serif;
@@ -73,7 +74,7 @@ textarea {
   background-color: #c5e5f77d;
   padding: 2px;
   margin-top: 5px;
-  height: 100%;
+  height: 90%;
 }
 
 h3 {
@@ -97,5 +98,9 @@ h2 {
 .meal {
   font-size: 13px;
   font-family: 'Montserrat', sans-serif;
+}
+.btn-position {
+  display: flex;
+  justify-content: center;
 }
 

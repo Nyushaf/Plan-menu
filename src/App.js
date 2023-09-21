@@ -12,9 +12,6 @@ function App() {
   const [selectedDay, setSelectedDay] = useState(false);
   const [myList, setMyList] = useState([]);
 
-  const myShoppingList = () => {
-    setMyList([selectedDay.ingredients, ...myList])
-  }
 
   const addMeal = () => {
     const newDay = {
@@ -59,7 +56,8 @@ function App() {
       <MyMealsAndIngredients
       selectedDay = {getActiveMeal()}
       updateDay = {updateDay}
-      myShoppingList = {myShoppingList}/>
+      setMyList = {setMyList}
+      myList={myList}/>
       <ShoppingList 
       myList = {myList}/>
     </div>
