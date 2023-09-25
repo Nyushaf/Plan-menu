@@ -9,13 +9,9 @@ const MyMealsAndIngredients = ({selectedDay, updateDay, setMyList, myList}) => {
 
     const addIngredients = (value) => {
         if (value) {
-            const updateIngredients = selectedDay.ingredients ? selectedDay.ingredients + "\n" + value : value;
-            updateDay({
-                ...selectedDay,
-                ingredients: updateIngredients
-            });
-            const newIngredients = value.split('\n');
-            setMyList(myList.push(...newIngredients));
+            
+            const newIngredients = value.split("\n");
+            setMyList(...myList, ...newIngredients);
         }
     }
 
