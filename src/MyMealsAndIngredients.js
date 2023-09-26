@@ -11,7 +11,7 @@ const MyMealsAndIngredients = ({selectedDay, updateDay, setMyList, myList}) => {
         if (value) {
             
             const newIngredients = value.split("\n");
-            setMyList(...myList, ...newIngredients);
+            setMyList(myList.push(...newIngredients));
         }
     }
 
