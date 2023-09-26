@@ -10,7 +10,7 @@ const MyMealsAndIngredients = ({selectedDay, updateDay, setMyList, myList}) => {
     const addIngredients = (value) => {
         if (value) {
             const newIngredients = value.split(",");
-            setMyList(myList.push(...newIngredients));
+            setMyList(myList.concat(newIngredients));
         }
     }
 

@@ -1,6 +1,6 @@
 const ShoppingList = ({myList}) => {
     if(!Array.isArray(myList)) {
-        return console.log("error")
+        return console.log(myList);
     }
     return(
         <div>
