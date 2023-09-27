@@ -9,8 +9,12 @@ const MyMealsAndIngredients = ({selectedDay, updateDay, setMyList, myList}) => {
 
     const addIngredients = (value) => {
         if (value) {
-            const newIngredients = value.split(",");
-            setMyList(myList.concat(newIngredients));
+            const newIngredients = value
+            .split(",")
+            .map((ingredient) => 
+            ingredient.trim().toLowerCase());
+            const filtederIngredients = newIngredients.filter((ingredient) => !myList.includes(ingredient));
+            setMyList(myList.concat(filtederIngredients));
         }
     }
 

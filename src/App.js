@@ -10,7 +10,8 @@ function App() {
   const [mealPlans, setMealPlans] = useState(
     localStorage.mealPlans ? JSON.parse(localStorage.mealPlans) : []);
   const [selectedDay, setSelectedDay] = useState(false);
-  const [myList, setMyList] = useState([]);
+  const [myList, setMyList] = useState(
+    localStorage.myList ? JSON.parse(localStorage.myList) : []);
 
 
   const addMeal = () => {
@@ -42,8 +43,9 @@ function App() {
   }
 
   useEffect(() => {
+    localStorage.setItem("myList", JSON.stringify(myList))
     localStorage.setItem("mealPlans", JSON.stringify(mealPlans))
-  }, [mealPlans])
+  }, [mealPlans, myList])
 
   return (
     <div className="App">

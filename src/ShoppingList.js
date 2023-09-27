@@ -6,11 +6,12 @@ const ShoppingList = ({myList}) => {
         <div>
             <h2>My Shopping List</h2>
             <div className="container-shoppingList">
-                <ul>
+                <ol>
                 {myList.map((item, index) => (
-                    <li key = {index}>{item}</li>
+                    <li key = {index}><span className="item">{item}</span></li>
                 ))}
-                </ul>
+                </ol>
+                <p>You have <span className="item">{myList.length}</span> items in Shopping list</p>
             </div>
             
         </div>
