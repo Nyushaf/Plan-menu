@@ -1,12 +1,12 @@
 const MyList = ({addMeal, mealPlans, removeDay, selectedDay, setSelectedDay}) => {
     
     return(
-        <div>
+        <div className="container-my-list">
             <div>
                 <h1>Weekly Meal Plan Ideas</h1>
                 <button className="btn-add" onClick={addMeal}>Add</button>
             </div>
-            <div>
+            <div className="day-container">
                 {mealPlans.map(({title, id, mealForADay}) => {
                     return(
                     <div key={id} className={`${id === selectedDay ? "selected" : "default"}`} onClick={() => setSelectedDay(id)}>

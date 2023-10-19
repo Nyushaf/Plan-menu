@@ -3,8 +3,10 @@ const ShoppingList = ({myList}) => {
         return console.log(myList);
     }
     return(
-        <div>
-            <h2>My Shopping List</h2>
+        <div className="container-shopping-list-position">
+            <div className="btn-position">
+                <h2 className="list-position">My Shopping List</h2>
+            </div>
             <div className="container-shoppingList">
                 <ol>
                 {myList.map((item, index) => (

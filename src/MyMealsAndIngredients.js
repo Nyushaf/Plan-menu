@@ -18,7 +18,7 @@ const MyMealsAndIngredients = ({selectedDay, updateDay, setMyList, myList}) => {
         }
     }
 
-    if (!selectedDay) return <h3>Create Your Weekly Menu Today</h3>
+    if (!selectedDay) return <h3 className="h3-header">Create Your Weekly Menu Today</h3>
     return(
         <div className="container-plan">
             <div className="meal-editing">
@@ -45,7 +45,7 @@ const MyMealsAndIngredients = ({selectedDay, updateDay, setMyList, myList}) => {
                 onChange={(e) => editMyMeal("ingredients", e.target.value)}
                 />
                 <div className="btn-position">
-                    <button className="btn-add" onClick={() => addIngredients(selectedDay.ingredients)}>Add ingredients to Shopping List</button>
+                    <button className="btn-add-ingr" onClick={() => addIngredients(selectedDay.ingredients)}>Add ingredients to Shopping List</button>
                 </div>
             </div>
 
